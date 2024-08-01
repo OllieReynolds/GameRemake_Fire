@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && npm run copy-html",
     "start": "tsc && node dist/main.js",
+    "copy-html": "copyfiles -u 1 src/index.html dist",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
   "devDependencies": {
     "@types/node": "^22.0.2",
     "@types/three": "^0.167.1",
+    "copyfiles": "^2.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.4"
   },
